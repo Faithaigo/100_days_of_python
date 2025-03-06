@@ -1,1 +1,1 @@
-# 100_days_of_python
+# Rock paper scissors game
