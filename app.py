@@ -11,17 +11,38 @@ nr_symbols = int(input("How many symbols would you like?\n"))
 nr_numbers = int(input("How many numbers would you like?\n"))
 
 # Easy version
-password = ''
+# password = ''
+# for letter in range(0, nr_letters):
+#     password += random.choice(letters)
+
+# for symbol in range(0, nr_symbols):
+#     password += random.choice(symbols)
+
+# for number in range(0, nr_numbers):
+#     password += random.choice(numbers)
+
+# print(f"Easy password: {password}")
+
+#Hard random password
+hard_password = ''
+combined_list = []
+
 for letter in range(0, nr_letters):
-    password += random.choice(letters)
+    combined_list.append(random.choice(letters))
 
 for symbol in range(0, nr_symbols):
-    password += random.choice(symbols)
+    combined_list += random.choice(symbols)
 
 for number in range(0, nr_numbers):
-    password += random.choice(numbers)
+    combined_list.append(random.choice(numbers))
 
-print(f"Easy password: {password}")
+
+random.shuffle(combined_list)
+print(combined_list)
+
+for char in combined_list:
+    hard_password += char
+print(f'Hard password: {hard_password}')
 
 
     
